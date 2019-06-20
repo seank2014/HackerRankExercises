@@ -13,8 +13,7 @@ public class Cat extends Animal13 {
     
     public Cat(){
         super(7);
-        System.out.println("A cat has been created");
-        
+        System.out.println("A cat has been created"); 
     }
     
     public void meow(){
@@ -33,6 +32,4 @@ public class Cat extends Animal13 {
     public void sleep(){
         System.out.println("A cat is sleeping");
     }
-    
-    
 }
