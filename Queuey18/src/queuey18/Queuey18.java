@@ -39,7 +39,7 @@ public class Queuey18 {
     //Dequeueing an item
     public String dequeue() {
         /*Example of casting*/
-        return (String) queue.remove(0);
+        return (String) queue.remove();
     }
 
     public String peek() {
@@ -55,8 +55,10 @@ public class Queuey18 {
         stackey.push("there");
         stackey.push("hi");
         System.out.print(stackey.pop() + " ");
+        System.out.println("Peek:" + stackey.peek());
         System.out.print(stackey.pop() + "! ");
         System.out.println(stackey.size());
+      
 
 //        Queuey18 stringQueue = new Queuey18();
 //        stringQueue.enqueue("hi");
