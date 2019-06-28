@@ -11,7 +11,7 @@ import java.util.LinkedList;
  *
  * @author seanking
  */
-public class LinkedList15<D> {
+public class LinkedList15<D, T extends Comparable<T>> {
 
     /**
      * @param args the command line arguments
