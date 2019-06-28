@@ -9,25 +9,25 @@ package linkedlist15;
  *
  * @author seanking
  */
-public class Node {
+public class Node<D> {
     //Properties
-    Node next;
-    int data;
+    Node<D> next;
+    D data;
     
     // Constructors
-    public Node (int newData){
+    public Node (D newData){
         this.data = newData;
         this.next = null;
     }
     
-    public Node(int newData, Node newNext){
+    public Node(D newData, Node newNext){
         this.data = newData;
         this.next = newNext;
     }
     
     // Getters and Setters
     
-    public int getData(){
+    public D getData(){
         return data;
     }
     
@@ -35,7 +35,7 @@ public class Node {
         return next;
     }
     
-    public void setData(int newData){
+    public void setData(D newData){
         this.data = newData;
     }
     

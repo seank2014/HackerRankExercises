@@ -11,7 +11,7 @@ import java.util.LinkedList;
  *
  * @author seanking
  */
-public class LinkedList15 {
+public class LinkedList15<D> {
 
     /**
      * @param args the command line arguments
@@ -19,7 +19,7 @@ public class LinkedList15 {
     
     // Properties
     
-    Node head;
+    Node<D> head;
     int count;
     
     // Constructors
@@ -29,7 +29,7 @@ public class LinkedList15 {
 //        this.count = 0;
 //    }
     
-    public LinkedList15(Node newHead){
+    public LinkedList15(Node<D> newHead){
         this.head = newHead;
         this.count = 1;
     }
@@ -38,9 +38,9 @@ public class LinkedList15 {
     
     //add
     
-    public void add(int newData){
-        Node temp = new Node(newData);
-        Node current = head;
+    public void add(D newData){
+        Node<D> temp = new Node(newData);
+        Node<D>  current = head;
         while(current.getNext() != null){
             current = current.getNext();
         }
@@ -49,12 +49,12 @@ public class LinkedList15 {
     }
     
     //get
-    public int get(int index){
-        if(index<= 0){
-            return -1;
-        }
+    public D get(int index){
+//        if(index<= 0){
+//            return D;
+//        }
         
-        Node current = head;
+        Node<D> current = head;
         for(int i =1; i < index; i++){
             current = current.getNext();
         }
@@ -75,7 +75,7 @@ public class LinkedList15 {
     
     public void remove(){
         //remove the back of the list
-        Node current = head;
+        Node<D> current = head;
         while(current.getNext().getNext() != null){
             current = current.getNext();
         }

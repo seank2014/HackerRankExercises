@@ -12,9 +12,10 @@ import java.util.Stack;
  *
  * @author seanking
  */
-public class Queuey18 {
+public class Queuey18 <D> {
 
-    LinkedList queue;
+
+    LinkedList<D> queue;
 
     //Making a queue instance
     public Queuey18() {
@@ -32,18 +33,18 @@ public class Queuey18 {
     }
 
     //Enqueing an item
-    public void enqueue(String n) {
+    public void enqueue(D n) {
         queue.addLast(n);
     }
 
     //Dequeueing an item
-    public String dequeue() {
+    public D dequeue() {
         /*Example of casting*/
-        return (String) queue.remove();
+        return queue.remove();
     }
 
-    public String peek() {
-        return (String) queue.get(0);
+    public D peek() {
+        return queue.get(0);
     }
 
     public static void main(String[] args) {
@@ -60,20 +61,20 @@ public class Queuey18 {
         System.out.println(stackey.size());
       
 
-//        Queuey18 stringQueue = new Queuey18();
-//        stringQueue.enqueue("hi");
-//        stringQueue.enqueue("there");
-//        System.out.print(stringQueue.dequeue() + " ");
-//        System.out.print(stringQueue.dequeue() + " ");
-//
-//        Queuey18 numberOne = new Queuey18();
-//        numberOne.enqueue(5);
-//        numberOne.enqueue(7);
-//        numberOne.enqueue(6);
-//        System.out.println("First out: " + numberOne.dequeue());
-//        System.out.println("Peek at second item: " + numberOne.peek());
-//        System.out.println("First out: " + numberOne.dequeue());
-//        System.out.println("First out: " + numberOne.dequeue());
+        Queuey18 stringQueue = new Queuey18();
+        stringQueue.enqueue("hi");
+        stringQueue.enqueue("there");
+        System.out.print(stringQueue.dequeue() + " ");
+        System.out.print(stringQueue.dequeue() + " ");
+
+        Queuey18 numberOne = new Queuey18();
+        numberOne.enqueue(5);
+        numberOne.enqueue(7);
+        numberOne.enqueue(6);
+        System.out.println("First out: " + numberOne.dequeue());
+        System.out.println("Peek at second item: " + numberOne.peek());
+        System.out.println("First out: " + numberOne.dequeue());
+        System.out.println("First out: " + numberOne.dequeue());
     }
 
 }

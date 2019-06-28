@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package arraypractice7;
+package arraypractice21;
 
 import java.lang.reflect.Array;
 import java.util.Arrays;
@@ -12,30 +12,13 @@ import java.util.Arrays;
  *
  * @author seanking
  */
-public class ArrayPractice7 {
+public class ArrayPractice21 {
 
-    public static void printArray(int[] array) {
-        System.out.print("[");
-        for (int i = 0; i < array.length; i++) {
-            int item = array[i];
-            System.out.print(item);
-            if (i < array.length - 1) {
-                System.out.print(", ");
-            }
+    public static <E> void printArray(E[] array) {
+        for (E element : array) {
+            System.out.print(element + " ");
         }
-        System.out.println("]");
-    }
-
-    public static void printArray(String[] array) {
-        System.out.print("[");
-        for (int i = 0; i < array.length; i++) {
-            String item = array[i];
-            System.out.print(item);
-            if (i < array.length - 1) {
-                System.out.print(", ");
-            }
-        }
-        System.out.println("]");
+        System.out.println();
     }
 
     /**
@@ -44,25 +27,20 @@ public class ArrayPractice7 {
     public static void main(String[] args) {
         // TODO code application logic here
 
-        // 0  1  2  3  4
-        //[0, 5, 3, 2, 1] --> length 5
-        
-        // Random Objects from Array
-        // Math.abs(rand.nextInt) % 5
-        
+        // 0 1 2 3 4
+        //[0,5,3,2,1] --> length 5
         // 0          1      2 
         //["bob", "bobby", "max"] --> length 3
         //How to initialize arrays
         // 1. Declaring
-        int[] intArray1;
+        Integer[] intArray1;
 
         // 2. Declaring and Allocation
-        int[] intArray2 = new int[4];
+        Integer[] intArray2 = new Integer[4];
 
-        printArray(intArray2);
+        //printArray();
         // 3. Declaring and Initializing
-
-        int[] intArray3 = {5, 2, 9, 1, 3};
+        Integer[] intArray3 = {5, 2, 9, 1, 3};
 
         String[] shoppingList = {"bananas", "apples", "pears"};
 
@@ -97,7 +75,7 @@ public class ArrayPractice7 {
 
         System.out.println("Special for loop:");
         // Special for loop foreach
-        for(String s : shoppingList){
+        for (String s : shoppingList) {
             System.out.println(s);
         }
     }
