@@ -12,6 +12,8 @@ import java.util.Stack;
  *
  * @author seanking
  */
+
+//Example of Generic class
 public class Queuey18 <D> {
 
 
