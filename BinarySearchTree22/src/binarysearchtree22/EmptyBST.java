@@ -28,6 +28,7 @@ public class EmptyBST<D extends Comparable> implements Tree<D> {
     }
 
     public NonEmptyBST<D> add(D elt) {
+        
         return new NonEmptyBST<D>(elt);
     }
     
