@@ -87,7 +87,7 @@ public class RunTimePractice25 {
         duration = endTime - startTime;
         System.out.println("Test " + duration + " ms");
         
-          startTime = System.currentTimeMillis(); //setting timer
+        startTime = System.currentTimeMillis(); //setting timer
         System.out.println(findNumsOfRepetitionsv2("oajdooDOmsdoemoxmojeifhinincalcaincsiialncxidnansacxacianbdinccadilcancncsiancdianc", a));
         endTime = System.currentTimeMillis();
         duration = endTime - startTime;
